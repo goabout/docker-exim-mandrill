@@ -10,5 +10,7 @@ RUN apk add --update \
 
 COPY exim.conf /templates/etc/exim/exim.conf
 
+EXPOSE 25
+
 ENTRYPOINT ["entrypoint", "--"]
 CMD ["exim", "-bdf", "-d-all+route", "-q30m"]
