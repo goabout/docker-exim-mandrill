@@ -8,13 +8,13 @@ This is the Git repo of the Go About Docker image for a mailer that uses
 
 ## Usage
 
-    docker run -e fallback_user=USER -e domain=DOMAIN -e mandrill_username=USERNAME -e mandrill_api_key=API_KEY goabout/exim-mandrill
+    docker run -e mandrill_username=USERNAME -e mandrill_api_key=API_KEY goabout/exim-mandrill
 
 
 ## Variables
 
 The images uses
-[jcassee/templated-entrypoint](https://github.com/jcassee/templated-entrypoint)
+[jcassee/parameterized-entrypoint](https://github.com/jcassee/parameterized-entrypoint)
 for parameterization. The following variables are available:
 
 * **hostname**: The mailer hostname. If unset, the container hostname is used.
